@@ -1,0 +1,95 @@
+body,
+html,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+input,
+select {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  background-image: url("../svg/bckg.svg");
+}
+
+.in-main {
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   flex-direction: column;
+  width: 350px;
+  height: 550px;
+  background-color: #3f51b508;
+  backdrop-filter: blur(6px);
+  border-radius: 15px;
+
+  @media screen and (max-width: 475px) {
+    width: 290px;
+  }
+}
+
+//header
+.live-currency {
+  text-align: center;
+  margin-top: 45px;
+  &__item {
+    color: white;
+    margin: 10px;
+  }
+}
+
+//converters
+.converters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+
+  &__item {
+    margin: 15px 0;
+    & > input {
+      height: 50px;
+      background-color: transparent;
+      color: white;
+      border: 1px solid;
+      border-color: transparent transparent #fff transparent;
+    }
+    & > input:focus {
+      outline: #fff;
+    }
+    & > select {
+      height: 50px;
+      background-color: transparent;
+      color: white;
+      //   border: none;
+      border-color: #fff transparent transparent transparent;
+
+      & > option {
+        background-color: rgb(202, 202, 202);
+      }
+    }
+    & > select:focus {
+      outline: #fff;
+    }
+  }
+}
+
+//arrow
+.arrow-svg {
+  width: 50px;
+  height: 35px;
+  fill: white;
+}
