@@ -13,7 +13,7 @@ const CurrenyConverter = (props) => {
 
   return (
     <div className="converters__item">
-      <input type="number" value={amount} onChange={onChangeAmount} />
+      <input type="number" value={amount} onChange={onChangeAmount} inputmode="tel" />
       <select value={selectedCurrency} onChange={onChangeCurrency}>
         {currencyOptions.map((option) => (
           <option key={shortid.generate()} value={option}>
